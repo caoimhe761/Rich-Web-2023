@@ -21,8 +21,8 @@
  .box-two {
    
      padding: 0.1em;
-     background-color: #2D9CDB;
-     border: 0 solid #27AE60;
+     background-color: #a45393;
+     border: 0 solid #b1d2bf;
      
   /* Do not forget the behaviour known as margin collapsing. When two elements have two different margins, they will be separated by the highest one.  */
      margin: 0em;
