@@ -1,0 +1,65 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply basic styles to the container */
+.container {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid black;
+}
+
+/* Create the flexible grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+/* Style each cell */
+.cell {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* nested grids */
+.nested-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style nested cells */
+.nested-cell {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Media queries for responsive behavior */
+@media (max-width: 960px) {
+    .grid {
+        flex-wrap: wrap;
+    }
+    .cell {
+        width: 50%;
+    }
+    .nested-cell {
+        width: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .cell {
+        width: 100%;
+    }
+    .nested-cell {
+        width: 100%;
+    }
+}
