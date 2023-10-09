@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Phone Directory</h1>
+    <div id="error" class="error"></div>
+    <form class="add-contact-button">
+        <input type="text" id="name" placeholder="Enter name" autocomplete="name">
+        <input type="text" id="mobile" placeholder="Enter mobile" autocomplete="mobile">
+        <input type="text" id="email" placeholder="Enter email" autocomplete="email">
+        <button type = "submit" id="addContact">Add Contact</button>
+    </form>
+    <div id="search">
+        <label for="mobile">Search by Mobile no:</label>
+        <input type="text" id="search" placeholder="Search by mobile">
+    </div>
+    <div id="noResult" class="error">No matching contacts found.</div>
+    <h2> Contacts Summary </h2>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th data-sort="asc" onclick="sortTable(0)">Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="contactList">
+            <!-- Contacts will be dynamically added here -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
