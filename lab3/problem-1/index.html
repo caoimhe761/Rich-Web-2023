@@ -17,14 +17,14 @@
     </form>
     <div id="search">
         <label for="mobile">Search by Mobile no:</label>
-        <input type="text" id="search" placeholder="Search by mobile">
+        <input type="text" id="searchInput" placeholder="Search by mobile">
     </div>
     <div id="noResult" class="error">No matching contacts found.</div>
     <h2> Contacts Summary </h2>
     <table id="contactTable">
         <thead>
             <tr>
-                <th data-sort="asc" onclick="sortTable(0)">Name</th>
+                <th onclick="sortTable()">Name</th>
                 <th>Mobile</th>
                 <th>Email</th>
             </tr>
