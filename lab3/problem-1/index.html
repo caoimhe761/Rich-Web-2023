@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Directory</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Phone Directory</h1>
     <div id="error" class="error"></div>
-    <form class="add-contact-button">
-        <input type="text" id="name" placeholder="Enter name" autocomplete="name">
-        <input type="text" id="mobile" placeholder="Enter mobile" autocomplete="mobile">
-        <input type="text" id="email" placeholder="Enter email" autocomplete="email">
-        <button type = "submit" id="addContact">Add Contact</button>
-    </form>
-    <div id="search">
-        <label for="mobile">Search by Mobile no:</label>
-        <input type="text" id="searchInput" placeholder="Search by mobile">
+    <div class="contact-form">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="mobile" placeholder="Mobile">
+        <input type="text" id="email" placeholder="Email">
+        <button id="add-contact">Add Contact</button>
     </div>
-    <div id="noResult" class="error">No matching contacts found.</div>
-    <h2> Contacts Summary </h2>
-    <table id="contactTable">
+    <div class="filter">
+        <label>Search contact by Mobile No: </label>
+        <input type="text" id="search" placeholder="Search by Mobile">
+    </div>
+    <div id="noResult" class="error">No matching results</div>
+    <table id="contact-table">
         <thead>
             <tr>
-                <th onclick="sortTable()">Name</th>
+                <th id="name-header">Name</th>
                 <th>Mobile</th>
                 <th>Email</th>
             </tr>
         </thead>
-        <tbody id="contactList">
-            <!-- Contacts will be dynamically added here -->
-        </tbody>
+        <tbody></tbody>
     </table>
+
     <script src="script.js"></script>
 </body>
 </html>

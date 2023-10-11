@@ -16,26 +16,27 @@ h1 {
     display: none;
 }
 
-table {
-    border-collapse: collapse;
+#contact-table {
     width: 60%;
+    border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
+#contact-table th, #contact-table td {
+    border: 1px solid #ffffff;
     padding: 8px;
-    text-align: left;
 }
 
-th {
+#contact-table th {
     background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+#contact-table th:hover {
+    background-color: #ffffff;
 }
 
  /* CSS for the blue rounded square button */
- .add-contact-button {
+ .contact-form {
     display: inline-block;
     padding: 30px 50px;
     border: 2px solid #0553a6; /* Blue border */
@@ -49,9 +50,9 @@ th {
     margin-bottom: 15px;
 }
 
-.add-contact-button:hover {
+.contact-form:hover {
     background-color: #0056b3; /* Darker blue color on hover */
 }
-#search{
-    margin-bottom: 5px;
-}
+.filter{
+        margin-bottom: 10px;
+    }
