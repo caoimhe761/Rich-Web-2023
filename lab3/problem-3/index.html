@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Profile</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>GitHub User Info</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1 id="userName">User's Name</h1>
-    <div class="filter">
-        <label>Search contact by Mobile No: </label>
-        <input type="text" id="search" placeholder="Search by Mobile">
-    </div>
+    <form id="user-form">
+        <input type="text" id="username" placeholder="Enter GitHub Username">
+        <button type="submit">Get User Info</button>
+    </form>
     <div class="profile-container">
-        <div class="profile">
-            <img src="profile-picture.jpg" alt="User's Profile Picture">
-            
-            <p>Name</p>
-            <p>User Name</p>
-            <p>Email:</p>
-            <p>Location:</p>
-            <p>About Me:</p>
-            <p>Number of Gists:</p>
+        <div id="containter1">
+            <h1>User Profile </h1>
+             <ul id="user-info">
+            <!-- User information will be displayed here -->
+            </ul>
         </div>
-        <div class="repos">  
-            <table id="contact-table">
-                <thead>
-                    <tr>
-                        <th >Name</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+    <div id="blank"><h1>User Repos </h1> <ul id="repos-list" class="repo-list"></ul></div>
+   
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

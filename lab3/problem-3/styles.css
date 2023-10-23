@@ -1,30 +1,53 @@
-#userName{
+body{
+    margin: 60px;
+}
+#username{
     display: inline-block;
-    padding: 10px 10px;
-    border: 2px solid #000000;;
+    padding-right: 400px;
     text-align: left;
     font-weight: bold;
+    padding-top: 6px;
     margin-bottom: 15px;
+}
+button{
+    border-radius: 10px; /* Rounded corners */
+    padding: 6px;
+    border: 0.5px solid #000000;;
+    width: 150px
+    
 }
 .profile-container {
     display: flex;
 }
-.profile{
+#container1{
     flex: 1;
+}
+#user-info{
     display: inline-block;
-    padding: 30px 50px;
-    border: 2px solid #000000; /* Blue border */
     text-align: centre;
     font-weight: bold;
     margin-bottom: 15px;
 }
-.repos {
-    flex: 1;
+.repo-list {
     padding: 20px;
 }
 img{
-    align-items: left;
+    max-width: 40%;  /* Set the maximum width */
+    margin-left: 125px;
+    align-items: center;
     padding: 10px 10px;
-    border: 2px solid #000000;;
+    border: 2px solid #000000;
     border-radius: 10px; /* Rounded corners */
 }
+li{
+    border: 2px solid #000000;
+    padding: 5px; /* Add some padding to separate the border from the text */
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #blank{
+    flex: 1;
+  }
