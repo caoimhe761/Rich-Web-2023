@@ -1,0 +1,85 @@
+Consider three asynchronous tasks, A,B & C. What are the consequences of these
+ functions sharing global state? 
+What is a good practice to alleviate any problems associated with this?
+
+Sharing global state among asynchronous tasks (functions A, B, and C) can lead to several consequences, often introducing challenges in terms of coordination, data integrity, and maintainability. Here are some potential consequences:
+
+1. **Race Conditions:**
+   If functions A, B, and C operate on shared global state concurrently, there's a risk of race conditions. Race conditions occur when the outcome of the program depends on the relative timing of events, and multiple tasks try to modify the shared state simultaneously.
+
+2. **Data Inconsistency:**
+   Global state shared among functions may lead to data inconsistency if one function modifies the state while another is reading or modifying it. This inconsistency can result in unexpected behavior and bugs.
+
+3. **Complex Debugging:**
+   Debugging becomes more complex when functions share global state, especially in large codebases. It becomes challenging to trace the flow of data and identify the source of issues.
+
+4. **Code Maintenance Challenges:**
+   Asynchronous tasks with shared global state can make the code harder to maintain and understand. It becomes difficult to reason about the behavior of the system and make modifications without unintended side effects.
+
+### Good Practices to Alleviate Problems Associated with Shared Global State:
+
+1. **Use Function Parameters:**
+   Instead of relying on global state, pass necessary data explicitly to functions as parameters. This reduces coupling and makes it clear what data each function depends on.
+
+   ```javascript
+   function taskA(data) {
+       // ...
+   }
+
+   function taskB(data) {
+       // ...
+   }
+
+   function taskC(data) {
+       // ...
+   }
+   ```
+
+2. **Encapsulate State:**
+   If global state is unavoidable, encapsulate it within a module or class. Limit direct access to the shared state and provide well-defined interfaces for reading and modifying the state.
+
+   ```javascript
+   const stateModule = (() => {
+       let sharedState = {};
+
+       return {
+           getState: () => sharedState,
+           setState: (newState) => { sharedState = { ...sharedState, ...newState }; }
+       };
+   })();
+   ```
+
+3. **Use Promises or Async/Await:**
+   When dealing with asynchronous tasks, consider using Promises or Async/Await to sequence and coordinate tasks. This can help avoid callback hell and make the code more readable and maintainable.
+
+   ```javascript
+   async function performTasks() {
+       const resultA = await taskA();
+       const resultB = await taskB(resultA);
+       const resultC = await taskC(resultB);
+       return resultC;
+   }
+   ```
+
+4. **Functional Programming Principles:**
+   Embrace functional programming principles, such as immutability, to reduce the likelihood of unintended side effects. Functions should not mutate shared state but instead return new values.
+
+   ```javascript
+   function updateState(oldState, newData) {
+       return { ...oldState, ...newData };
+   }
+
+   const newState = updateState(existingState, { key: 'value' });
+   ```
+
+5. **Use Local Scopes:**
+   Whenever possible, use local scopes for variables. Avoid unnecessary global variables, and prefer block-scoped variables using `let` or `const` within functions.
+
+   ```javascript
+   function taskA() {
+       let localVar = 42;
+       // ...
+   }
+   ```
+
+By following these practices, you can mitigate the consequences associated with shared global state, making your asynchronous tasks more manageable, maintainable, and less error-prone.

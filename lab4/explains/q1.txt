@@ -1,0 +1,61 @@
+Explain what is meant by the stream abstraction. What is the relationship between streams and the observer pattern? #
+What are streams useful for modeling and when might you use them in Rich Web development?
+
+
+ a stream is an abstraction for some data which
+may or may not be present now or may or may not arrive in the
+future
+In the context of rich web app development, an obvious application for
+streams is as an abstraction of asynchronous events
+If data lives in several remote locations, stream abstract
+ is the way to go 
+ Using streams everywhere allows the application architecture to reduce
+to a steam processing problem operating on a merged set of one or more
+data streams
+Streams implement a design pattern called the observable pattern
+● An observable is similar to a promise: it helps to work with asynchronous
+functionalities
+● While promises handle a single event once the promise is completed or
+fail, observables work with multiple values
+● Observables can also be cancelled - if the result of an HTTP request, for
+example, isn’t needed anymore, the observable allows cancelling the
+subscription to this request, while a promise will eventually call the
+success or failed callback even when not needed
+One possible solution to the synchronisation problem is to model all
+application state as streams, providing a unified abstraction of everything
+● Using streams everywhere allows the application architecture to reduce
+to a steam processing problem operating on a merged set of one or more
+data streams
+● For example, mouse clicks, keyboard input, network responses, timers
+and DOM state changes can all be processed within the same logical
+structure using the same semantics
+
+
+
+
+
+The stream abstraction is a concept used in programming to represent and manipulate sequences of data over time. A stream can be thought of as a continuous flow of data elements that are emitted, processed, and consumed asynchronously. Streams are particularly useful for handling asynchronous events, such as user input, network responses, or other time-dependent operations.
+
+The observer pattern is a design pattern that establishes a one-to-many dependency between objects. In the context of streams, the observer pattern is often closely related to the concept of an observable and an observer. An observable represents a stream of data, and an observer is an entity that subscribes to the observable to receive notifications when new data is available or when an event occurs.
+
+The relationship between streams and the observer pattern can be summarized as follows:
+
+Observable (Stream): An observable is a source of data or events over time. It emits items or notifies observers when there are changes or new data.
+
+Observer: An observer is an entity that expresses interest in receiving updates from an observable. It subscribes to an observable to receive notifications.
+
+Subscription: The act of an observer subscribing to an observable is often referred to as a subscription. The observer receives updates asynchronously as the observable emits new data.
+
+Streams are useful for modeling and managing asynchronous data flows, and they offer several benefits in rich web development:
+
+Asynchronous Operations: Streams are well-suited for handling asynchronous operations, such as fetching data from a server, handling user interactions, or responding to events over time.
+
+Real-time Updates: In scenarios where real-time updates or continuous data flow is essential (e.g., chat applications, live feeds, or financial data), streams provide a natural and efficient way to manage the flow of information.
+
+Event Handling: Streams are excellent for modeling and handling events in the user interface. They allow developers to react to user input, animations, and other dynamic changes.
+
+Modular and Composable: Streams support a modular and composable approach to handling asynchronous operations. Developers can chain and compose streams to create complex workflows without resorting to nested callbacks.
+
+Reactive Programming: Streams are a fundamental concept in reactive programming, which is a paradigm focused on asynchronous data streams and the propagation of changes. Libraries like RxJS (Reactive Extensions for JavaScript) provide powerful tools for working with streams in a reactive manner.
+
+In summary, the stream abstraction and the observer pattern provide a powerful and flexible way to model and manage asynchronous data flows, making them invaluable in rich web development scenarios where responsiveness, real-time updates, and event-driven interactions are crucial.

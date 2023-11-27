@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <label>Repo: </label><a href="${repo.html_url}" target="_blank">${repo.html_url}</a>`;
                     reposList.appendChild(li);
                 });
+
             })
             .catch(error => {
                 console.error('Error:', error);

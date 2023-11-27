@@ -76,6 +76,5 @@ document.addEventListener("DOMContentLoaded", () => {
             noteElement.appendChild(saveButton);
             noteElement.appendChild(deleteButton); // Add the Delete button
         }
-    
     });
     
