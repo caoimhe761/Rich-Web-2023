@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Margin Styles */
+  .margin {
+    margin: 50px;
+    background-color: #377b69; /* Light gray for margin */
+  }
+  
+  /* Border Styles */
+  .border {
+    border: 10px solid #10d541;
+    background-color: #16a93b; /* Lighter gray for border */
+  }
+  
+  /* Padding Styles */
+  .padding {
+    padding: 20px;
+    background-color: #861919; /* Lightest gray for padding */
+  }
+  
+  /* Content Styles */
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: #4423b1; /* Dark gray for content */
+  }
+  

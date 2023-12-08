@@ -1,0 +1,89 @@
+/* NoteApp.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.note p {
+    flex-grow: 1;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next row */
+    gap: 20px;
+    max-width: 800px;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+.note {
+    align-items: center;
+    background-color: #ff5733;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+    
